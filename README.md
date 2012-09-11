@@ -32,6 +32,9 @@ Install:
   gem install daemons  
 
 Configure:  
+Set the location of your graphital.conf in on the first line of graphital.rb:  
+  load '/opt/graphital/graphital.conf'
+
 Set your Graphite server in graphital.conf:  
   $HOST = 'graphite.example.com'  
 

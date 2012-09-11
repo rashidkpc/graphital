@@ -3,9 +3,10 @@
 
 Graphital is a very (~50 lines) simple ruby daemon for shipping system vitals 
 to Graphite. It uses a graphital.d directory and simply runs everything in it.
-Several examples are included, but its easy to write your own in your language
-of choice. If you write something particularly useful, please do share. Scripts
-should output in the format:  
+Several examples are included (most require the 'sar' utility from the sysstat
+package), but its easy to write your own in your language of choice. If you w
+rite something particularly useful, please do share. Scripts should output in 
+the format:  
   metric #
 
 For example, to track cpu % you might create a file called

@@ -40,11 +40,11 @@ script before the first `.`. The above example might create a metric like
 
 ### Configure
 
-Set the location of your `graphital.conf` in on the first line of `graphital.rb`:  
+There is an example configuration file called `graphital.conf.eg` (that will
+be loaded if nothing else is found). You should create your own configuration
+file at `/etc/graphital.conf` or `/opt/graphital/graphital.conf`.
 
-    load '/opt/graphital/graphital.conf'
-
-Set your Graphite server in graphital.conf:  
+Make sure you set your Graphite server address in your `graphital.conf`:  
 
     $HOST = 'graphite.example.com'
 

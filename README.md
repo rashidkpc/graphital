@@ -54,3 +54,27 @@ This will invoke `graphital.rb` and put it into the background.
 
     ruby /opt/graphital/daemon.rb start  
 
+### Run as a service using Upstart (e.g. on Ubuntu or Fedora)
+
+Rather than using the `daemons` gem, you can run `graphital.rb` directly, and
+use another method for making it a service that can be started, tracked and
+stopped.
+
+On systems using [Upstart](http://upstart.ubuntu.com/cookbook/), this is as
+easy as adding a `/etc/init/graphital.conf` file like:
+
+    description     "send system vitals to graphite"
+
+    start on runlevel [2345]
+    stop on runlevel [!2345]
+
+    respawn
+
+    exec /usr/bin/ruby /opt/graphital/graphital.rb
+
+Try it out with:
+
+    service graphital start
+    service graphital status
+    service graphital restart
+

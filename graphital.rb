@@ -1,4 +1,15 @@
-load '/opt/graphital/graphital.conf'
+#!/usr/bin/ruby
+
+begin
+  load '/etc/graphital.conf'
+rescue LoadError
+  begin
+    load '/opt/graphital/graphital.conf'
+  rescue LoadError
+    load '/opt/graphital/graphital.conf.eg'
+  end
+end
+
 require 'socket'
 require 'timeout'
 
@@ -40,3 +51,4 @@ loop {
   output = Thread.new{vital_output($HOST,$PORT)} 
   sleep $INTERVAL;
 }
+

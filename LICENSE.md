@@ -1,4 +1,4 @@
-# LICENSE
+# LICENSE - MIT
 Copyright (c) 2012, Rashid Khan
 All rights reserved.
 

@@ -7,12 +7,12 @@ free = %x{'free'}.split("\n")
 
 descriptions  = free[0].split(/\s+/).collect(&:strip)
 mem           = free[1].split(/\s+/).collect(&:strip)
-swap          = free[3].split(/\s+/).collect(&:strip)
+#swap          = free[3].split(/\s+/).collect(&:strip)
 buffers       = free[2].split(/\s+/).collect(&:strip)
 
 descriptions.shift
 mem.shift
-swap.shift
+#swap.shift
 buffers.shift
 buffers.shift
 
@@ -22,7 +22,7 @@ mem = mem.zip(descriptions)
   descriptions.pop
 end
 
-swap = swap.zip(descriptions)
+#swap = swap.zip(descriptions)
 
 descriptions.shift
 
@@ -36,6 +36,6 @@ buffers.each do |metric,description|
   puts "cache.#{description} #{metric}"
 end
 
-swap.each do |metric,description|
-  puts "swap.#{description} #{metric}"
-end
+#swap.each do |metric,description|
+#  puts "swap.#{description} #{metric}"
+#end

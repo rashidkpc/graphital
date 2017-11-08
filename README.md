@@ -1,5 +1,7 @@
 # Graphital 
 
+#### This probably still works, but I don't use it anymore, so I don't update it anymore, hence it has been archived.
+
 Find Rashid Khan ([rashidkpc](irc://irc.freenode.net/rashidkpc,isnick))
 in [#logstash](irc://irc.freenode.net/logstash).
 
